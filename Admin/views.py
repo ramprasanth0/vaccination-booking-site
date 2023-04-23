@@ -1,3 +1,4 @@
+'''
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from User.models import vaccination_centre
@@ -31,3 +32,4 @@ def admin_access(request):
             return redirect('admin_access')
     else:
         return render(request,'admin_access.html')
+'''
