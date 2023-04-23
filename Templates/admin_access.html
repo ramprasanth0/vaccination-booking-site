@@ -1,0 +1,20 @@
+{% extends 'home_template.html' %}
+
+
+{% block content %}
+    <center>
+    <form name="admin_access" action="" method="post">
+        {% csrf_token %}
+            <h1>ADD center</h1>
+            <input style= "padding: 10px;" name="add_centre" type="text" placeholder="add centre"value="" required>
+            <h2>GET DOSAGE DETAILS</h2>
+            <h3>REMOVE VACCINATION CENTRE</h3>
+            <input style= "padding: 10px;" name="remove_centre" type="text" placeholder="remove centre"value="" required>
+            <input style= "padding: 10px;"type="submit" name="submit" value="SUBMIT">
+    </form>
+    {% for message in messages%}
+    <h2 style="color: red;"><b>{{message}}</b></h2>
+    {% endfor%}
+    <a href="{% url 'user_logout'%}"><button style="align-items: center; font-size: 20px;padding: 10px; background-color:rgba(0, 110, 255, 0.031);margin-top:10px;">LOGOUT</button></a>
+    </center>
+{% endblock %}

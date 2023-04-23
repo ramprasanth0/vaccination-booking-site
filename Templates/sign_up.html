@@ -1,0 +1,24 @@
+{% extends 'home_template.html' %}
+
+
+{% block content %}
+    <center>
+    <form name="sign_up" action="" method="post">
+        {% csrf_token %}
+        <pre style="font-size: 20px;">
+            <h1>SIGNUP</h1>
+            FIRST NAME         : <input type="text" name="first_name" value="" required><br>
+            LAST NAME          : <input type="text" name="last_name" value="" required><br>
+            USER NAME          : <input type="text" name="username" value="" required><br>
+            EMAL ID            : <input type="text" name="email" value="" required><br>
+            NEW PASSWORD       : <input type="text" name="password1" value="" required><br>
+            CONFIRM PASSWORD   : <input type="text" name="password2" value="" required><br>
+            CONTACT NUMBER     : <input type="text" name="contact_no" value="" required><br>
+            <input style="align-items: center; font-size: 20px;padding: 5px; background-color:rgba(0, 110, 255, 0.031);" type="submit" name="reg" value="SUMMIT">
+        </pre>
+    </form>
+    {% for message in messages%}
+    <h2 style="color: red;"><b>{{message}}</b></h2>
+    {% endfor%}
+    </center>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'home_template.html' %}
+
+
+{% block content %}
+<center> 
+    <pre>
+        ERROR:
+                password does not match
+                username already exists
+                email already exists
+
+    </pre>
+    <a href='login_page'><button style="align-items: center;">RETRY LOGIN</button></a>
+</center>  
+
+{% endblock %}

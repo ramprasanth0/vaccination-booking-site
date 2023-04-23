@@ -1,0 +1,10 @@
+{% extends 'home_template.html' %}
+
+
+{% block content %}
+<h1 style="font-size: 40px; ">HELLO USER</h1>
+<center>
+    <a href="{% url 'user_login_page'%}"><button style="align-items: center;font-size: 30px;padding: 10px; background-color:rgba(0, 110, 255, 0.031);border:none">LOGIN</button></a>
+    <a href="{% url 'sign_up'%}"><button style="align-items: center;font-size: 30px;padding: 10px; background-color:rgba(0, 110, 255, 0.031);border:none">SIGNUP</button></a>
+</center>
+{% endblock %}
